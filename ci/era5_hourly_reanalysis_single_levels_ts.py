@@ -2,6 +2,7 @@ import yaml
 import fsspec
 from datetime import datetime, timedelta
 
+# Configs
 CLIENT_KWARGS = {'endpoint_url': 'https://s3.wasabisys.com',
                  'region_name': 'us-east-1'}
 CONFIG_KWARGS = {'max_pool_connections': 100}
