@@ -1,11 +1,11 @@
 name: DataOps
 
 on:
-  push
-  
+  push:
+    branches:
+      - master
 jobs:
   run:
-
     name: Hydat-Forge Data Pipeline
     runs-on: ubuntu-latest
     steps:
@@ -17,18 +17,4 @@ jobs:
           python-version: 3.8
           auto-activate-base: false
       - shell: bash -l {0}
-        run: |
-            mkdir -p ~/.aws
-            touch ~/.aws/credentials
-            echo "
-            [default]
-            aws_access_key_id = ${{ secrets.AWS_ACCESS_KEY_ID }}
-            aws_secret_access_key = ${{ secrets.AWS_SECRET_KEY_ID }}
-            region = us-east-1
-            source_profile = default" > ~/.aws/credentials
-            touch ~/.cdsapirc
-            echo "
-            url: https://cds.climate.copernicus.eu/api/v2
-            key: ${{ secrets.CDS_API_KEY }}
-            " > ~/.cdsapirc
-            python ./ci/era5_hourly_reanalysis_single_levels_ts.py
+        run: python ./ci/era5_hourly_reanalysis_single_levels_ts.py
