@@ -6,7 +6,7 @@ CLIENT_KWARGS = {'endpoint_url': 'https://s3.wasabisys.com',
                  'region_name': 'us-east-1'}
 CONFIG_KWARGS = {'max_pool_connections': 100}
 PROFILE = 'default'
-STORAGE_OPTIONS = {'profile': PROFILE,
+STORAGE_OPTIONS = {'anon': True,
                    'client_kwargs': CLIENT_KWARGS,
                    'config_kwargs': CONFIG_KWARGS}
 fs = fsspec.filesystem('s3', **STORAGE_OPTIONS)
