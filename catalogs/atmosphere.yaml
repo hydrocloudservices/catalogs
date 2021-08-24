@@ -2,7 +2,7 @@ plugins:
   source:
     - module: intake_xarray
 sources:
-  era5_hourly_reanalysis_single_levels_sa:
+  era5_hourly_reanalysis_single_levels_ts:
     description: "ERA5 hourly estimates of variables on single levels"
     metadata:
       url: 'https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels'
