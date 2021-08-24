@@ -13,11 +13,11 @@ jobs:
         persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
     - uses: conda-incubator/setup-miniconda@v2
-        with:
-          activate-environment: era5-pavics
-          environment-file: .binder/environment.yml
-          python-version: 3.8
-          auto-activate-base: false
+      with:
+        activate-environment: era5-pavics
+        environment-file: .binder/environment.yml
+        python-version: 3.8
+        auto-activate-base: false
     - name: Create local changes
       run: |
         python ./ci/era5_hourly_reanalysis_single_levels_ts.py
