@@ -3,7 +3,7 @@ name: DataOps
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   run:
     name: Hydat-Forge Data Pipeline
