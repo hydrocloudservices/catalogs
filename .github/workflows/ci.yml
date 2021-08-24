@@ -5,16 +5,27 @@ on:
     branches:
       - main
 jobs:
-  run:
-    name: Hydat-Forge Data Pipeline
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: conda-incubator/setup-miniconda@v2
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+        fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+    - uses: conda-incubator/setup-miniconda@v2
         with:
           activate-environment: era5-pavics
           environment-file: .binder/environment.yml
           python-version: 3.8
           auto-activate-base: false
-      - shell: bash -l {0}
-        run: python ./ci/era5_hourly_reanalysis_single_levels_ts.py
+    - name: Create local changes
+      run: |
+        python ./ci/era5_hourly_reanalysis_single_levels_ts.py
+    - name: Commit files
+      run: |
+        git commit -m "Update catalog" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
