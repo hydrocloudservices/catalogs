@@ -11,7 +11,7 @@ STORAGE_OPTIONS = {'anon': True,
                    'config_kwargs': CONFIG_KWARGS}
 fs = fsspec.filesystem('s3', **STORAGE_OPTIONS)
 
-fname = "./catalog/atmosphere.yaml"
+fname = "./catalogs/atmosphere.yaml"
 
 # Get last available zarr
 count = 0
