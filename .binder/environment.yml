@@ -1,0 +1,10 @@
+name: era5-forge
+channels:
+ - conda-forge
+dependencies:
+ - python=3.8*
+ - s3fs
+ - dask
+ - fsspec
+ - intake-xarray
+ - pyyaml
