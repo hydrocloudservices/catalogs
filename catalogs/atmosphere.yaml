@@ -1,1 +1,24 @@
-
+plugins:
+  source:
+    - module: intake_xarray
+sources:
+  era5_hourly_reanalysis_single_levels_sa:
+    description: "ERA5 hourly estimates of variables on single levels"
+    metadata:
+      url: 'https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels'
+      tags:
+      - ocean
+      - model
+      - atmosphere
+    driver: netcdf
+    args:
+      urlpath:
+        - 's3://era5/world/reanalysis/single-levels/zarr-time-cache/2021-07-07'
+      xarray_kwargs:
+        engine : 'zarr'
+        consolidated: True
+        storage_options:
+          anon: True
+          client_kwargs:
+            endpoint_url : "https://s3.wasabisys.com"
+            region_name: 'us-east-1'
