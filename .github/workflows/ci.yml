@@ -19,11 +19,8 @@ jobs:
         python-version: 3.8
         auto-activate-base: false
     - shell: bash -l {0}
-    - name: Create local changes and commit
       run: |
         python ./ci/era5_hourly_reanalysis_single_levels_ts.py
-    - name: Commit files
-      run: |
         git commit -m "Update catalog" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
