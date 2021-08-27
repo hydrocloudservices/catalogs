@@ -6,7 +6,7 @@ sources:
     args:
       urlpath:
       - s3://era5/world/reanalysis/single-levels/zarr-time-cache/2021-08-14
-      - s3://era5/world/reanalysis/single-levels/zarr-time-cache/2021-08-20
+      - s3://era5/world/reanalysis/single-levels/zarr-time-cache/2021-08-21
       xarray_kwargs:
         consolidated: true
         engine: zarr
