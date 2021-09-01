@@ -28,7 +28,7 @@ while not store_exists and count < max_guesses_allowed:
 # Change urlpath in yaml and update
 stream = open(fname, 'r')
 data = yaml.load(stream, Loader=yaml.FullLoader)
-urlpaths = ['s3://era5/world/reanalysis/single-levels/zarr-time-cache/2021-08-14',
+urlpaths = ['s3://era5/world/reanalysis/single-levels/zarr-temporal/2021-06-30',
             urlpath]
 data['sources']['era5_hourly_reanalysis_single_levels_ts']['args']['urlpath']= urlpaths
 with open(fname, 'w') as yaml_file:
