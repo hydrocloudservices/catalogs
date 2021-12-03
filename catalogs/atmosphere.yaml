@@ -7,10 +7,10 @@ sources:
       urlpath:
       - s3://era5/world/reanalysis/single-levels/zarr-temporal/2021-06-30
       - s3://era5/world/reanalysis/single-levels/zarr-time-cache/2021-11-27
-      consolidated: true
+      consolidated: True
       engine: zarr
       storage_options:
-        anon: true
+        anon: True
         client_kwargs:
           endpoint_url: https://s3.wasabisys.com
           region_name: us-east-1
