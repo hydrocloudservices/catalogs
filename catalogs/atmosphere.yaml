@@ -16,7 +16,7 @@ sources:
             endpoint_url: https://s3.wasabisys.com
             region_name: us-east-1
     description: ERA5 hourly estimates of variables on single levels
-    driver: netcdf
+    driver: zarr
     metadata:
       tags:
       - ocean
