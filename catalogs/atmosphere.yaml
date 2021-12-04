@@ -4,16 +4,16 @@ plugins:
 sources:
   era5_hourly_reanalysis_single_levels_ts:
     args:
-      urlpath:
-      - s3://era5/world/reanalysis/single-levels/zarr-temporal/2021-06-30
-      - s3://era5/world/reanalysis/single-levels/zarr-time-cache/2021-11-01
-      consolidated: True
+      consolidated: true
       engine: zarr
       storage_options:
-        anon: True
+        anon: true
         client_kwargs:
           endpoint_url: https://s3.wasabisys.com
           region_name: us-east-1
+      urlpath:
+      - s3://era5/world/reanalysis/single-levels/zarr-temporal/2021-06-30
+      - s3://era5/world/reanalysis/single-levels/zarr-time-cache/2021-11-28
     description: ERA5 hourly estimates of variables on single levels
     driver: zarr
     metadata:
