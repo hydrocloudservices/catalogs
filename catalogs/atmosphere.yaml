@@ -13,7 +13,7 @@ sources:
           region_name: us-east-1
       urlpath:
       - s3://era5/world/reanalysis/single-levels/zarr-temporal/2021-06-30
-      - s3://era5/world/reanalysis/single-levels/zarr-time-cache/2022-03-14
+      - s3://era5/world/reanalysis/single-levels/zarr-time-cache/2022-03-15
     description: ERA5 hourly estimates of variables on single levels
     driver: zarr
     metadata:
