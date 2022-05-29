@@ -12,7 +12,7 @@ sources:
           endpoint_url: https://s3.wasabisys.com
           region_name: us-east-1
       urlpath:
-      - era5/world/reanalysis/single-levels/zarr-timeseries/archive
+      - era5/world/reanalysis/single-levels/zarr/timeseries/archive
     description: ERA5 hourly estimates of variables on single levels
     driver: zarr
     metadata:
