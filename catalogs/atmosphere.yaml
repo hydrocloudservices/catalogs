@@ -4,10 +4,10 @@ plugins:
 sources:
   era5_reanalysis_single_levels:
     args:
-      consolidated: true
+      consolidated: True
       engine: zarr
       storage_options:
-        anon: true
+        anon: True
         client_kwargs:
           endpoint_url: https://s3.wasabisys.com
           region_name: us-east-1
