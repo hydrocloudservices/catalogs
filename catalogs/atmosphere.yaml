@@ -2,7 +2,7 @@ plugins:
   source:
   - module: intake_xarray
 sources:
-  era5_hourly_reanalysis_single_levels_ts:
+  era5_reanalysis_single_levels:
     args:
       consolidated: true
       engine: zarr
