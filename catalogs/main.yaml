@@ -1,7 +1,7 @@
 description: 'Master Data Catalog'
 sources:
 
-  ocean:
+  hydrology:
     args:
       path: "{{CATALOG_DIR}}/hydrology.yaml"
     description: 'Hydrology Dataset Catalog'
