@@ -1,0 +1,16 @@
+description: 'Master Data Catalog'
+sources:
+
+  ocean:
+    args:
+      path: "{{CATALOG_DIR}}/hydrology.yaml"
+    description: 'Hydrology Dataset Catalog'
+    driver: intake.catalog.local.YAMLFileCatalog
+    metadata: {}
+
+  atmosphere:
+    args:
+      path: "{{CATALOG_DIR}}/atmosphere.yaml"
+    description: 'Atmospheric Science Dataset Catalog'
+    driver: intake.catalog.local.YAMLFileCatalog
+    metadata: {}
