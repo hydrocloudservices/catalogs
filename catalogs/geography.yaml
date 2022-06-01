@@ -9,10 +9,10 @@ sources:
         client_kwargs:
           endpoint_url: https://s3.us-east-2.wasabisys.com
           region_name: us-east-2
-      urlpath: s3://watersheds-polygons/MELCC/melcc_polygons.parquet
+      urlpath: s3://watersheds-polygons/MELCC/polygons.json
       use_fsspec: True
     description: MELCC basin delimitation
-    driver: geoparquet
+    driver: geopandasfile
     metadata:
       tags:
       - ocean
