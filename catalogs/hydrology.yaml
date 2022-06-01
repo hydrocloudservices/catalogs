@@ -2,7 +2,7 @@ plugins:
   source:
   - module: intake_xarray
 sources:
-  cehq:
+  melcc:
     args:
       consolidated: True
       engine: zarr
