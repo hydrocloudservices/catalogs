@@ -21,3 +21,18 @@ sources:
       - model
       - atmosphere
       url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels
+
+  daymet-daily-na:
+    args:
+      consolidated: True
+      engine: zarr
+      urlpath:
+      - https://daymeteuwest.blob.core.windows.net/daymet-zarr/daily/na.zarr
+    description: Daymet Data Version 4.0
+    driver: zarr
+    metadata:
+      tags:
+      - ocean
+      - model
+      - atmosphere
+      url: http://daymet.ornl.gov/
