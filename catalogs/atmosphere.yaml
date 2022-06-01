@@ -22,7 +22,7 @@ sources:
       - atmosphere
       url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels
 
-  daymet-daily-na:
+  daymet_daily_na:
     args:
       consolidated: True
       engine: zarr
