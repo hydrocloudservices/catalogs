@@ -1,0 +1,21 @@
+plugins:
+  source:
+  - module: intake_geopandas
+sources:
+  melcc_polygons:
+    args:
+      storage_options:
+        anon: True
+        client_kwargs:
+          endpoint_url: https://s3.us-east-2.wasabisys.com
+          region_name: us-east-2
+      urlpath: s3://watersheds-polygons/MELCC/polygons.json
+      use_fsspec: True
+    description: MELCC basin delimitation
+    driver: geopandasfile
+    metadata:
+      tags:
+      - ocean
+      - model
+      - atmosphere
+      url: https://www.cehq.gouv.qc.ca/hydrometrie/
