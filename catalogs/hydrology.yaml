@@ -12,7 +12,7 @@ sources:
           endpoint_url: https://s3.wasabisys.com
           region_name: us-east-1
       urlpath:
-      - s3://hydrometric/quebec/cehq/zarr/timeseries
+      - s3://hydrometric/quebec/cehq/zarr/test-timeseries
     description: CEHQ daily flow and water levels
     driver: zarr
     metadata:
