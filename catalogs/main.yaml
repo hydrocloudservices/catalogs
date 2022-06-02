@@ -18,7 +18,7 @@ sources:
   geography:
     args:
       path: "{{CATALOG_DIR}}/geography.yaml"
-    description: 'Atmospheric Science Dataset Catalog'
+    description: 'Geography Science Dataset Catalog'
     driver: intake.catalog.local.YAMLFileCatalog
     metadata: {}    
     
