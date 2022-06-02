@@ -36,3 +36,21 @@ sources:
       - model
       - atmosphere
       url: http://daymet.ornl.gov/
+  ghcnd-world:
+    args:
+      consolidated: True
+      engine: zarr
+      storage_options:
+        anon: True
+        client_kwargs:
+          endpoint_url: https://s3.wasabisys.com
+          region_name: us-east-1
+      urlpath:
+      - s3://ghcnd-world
+    description: Global Historical Climatology Network daily (GHCNd) 
+    driver: zarr
+    metadata:
+      tags:
+      - hydrology
+      - meteorology
+      url: https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily
