@@ -65,7 +65,7 @@ sources:
           region_name: us-east-1
       urlpath:
       - s3://scdna/zarr/version/1.1
-    description: SCDNA: a serially complete precipitation and temperature dataset for North America from 1979 to 2018
+    description: SCDNA a serially complete precipitation and temperature dataset for North America from 1979 to 2018
     driver: zarr
     metadata:
       tags:
