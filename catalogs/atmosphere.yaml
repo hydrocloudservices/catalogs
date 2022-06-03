@@ -53,8 +53,7 @@ sources:
       tags:
       - hydrology
       - meteorology
-      url: https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily
-      
+      url: https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily   
   scdna:
     args:
       consolidated: True
