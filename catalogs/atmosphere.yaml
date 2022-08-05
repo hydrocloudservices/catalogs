@@ -132,3 +132,18 @@ sources:
       - model
       - atmosphere
       url: https://psl.noaa.gov/data/gridded/data.20thC_ReanV3.html
+      
+  terraclimate:
+    args:
+    consolidated: True
+    engine: zarr
+    urlpath:
+    - https://cpdataeuwest.blob.core.windows.net/cpdata/raw/terraclimate/4000m/raster.zarr
+  description: Terraclimate
+  driver: zarr
+  metadata:
+    tags:
+    - ocean
+    - model
+    - atmosphere
+    url: http://daymet.ornl.gov/
