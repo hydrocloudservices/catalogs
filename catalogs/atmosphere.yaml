@@ -133,6 +133,46 @@ sources:
       - atmosphere
       url: https://psl.noaa.gov/data/gridded/data.20thC_ReanV3.html
 
+  20_century_reanalysis_pressure_levels:
+    args:
+      consolidated: True
+      engine: zarr
+      storage_options:
+        anon: True
+        client_kwargs:
+          endpoint_url: https://s3.wasabisys.com
+          region_name: us-east-1
+      urlpath:
+      - s3://cires-20-century-reanalysis-v3/zarr/pressure-levels
+    description: SCDNA a serially complete precipitation and temperature dataset for North America from 1979 to 2018
+    driver: zarr
+    metadata:
+      tags:
+      - ocean
+      - model
+      - atmosphere
+      url: https://psl.noaa.gov/data/gridded/data.20thC_ReanV3.html
+      
+  20_century_reanalysis_pressure_levels_large_area:
+    args:
+      consolidated: True
+      engine: zarr
+      storage_options:
+        anon: True
+        client_kwargs:
+          endpoint_url: https://s3.wasabisys.com
+          region_name: us-east-1
+      urlpath:
+      - s3://cires-20-century-reanalysis-v3/zarr/pressure-levels-space
+    description: SCDNA a serially complete precipitation and temperature dataset for North America from 1979 to 2018
+    driver: zarr
+    metadata:
+      tags:
+      - ocean
+      - model
+      - atmosphere
+      url: https://psl.noaa.gov/data/gridded/data.20thC_ReanV3.html
+
   terraclimate:
     args:
       consolidated: True
