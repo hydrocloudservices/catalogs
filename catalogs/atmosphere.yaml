@@ -21,7 +21,26 @@ sources:
       - model
       - atmosphere
       url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels
-      
+  
+  era5_land_reanalysis_spatial:
+    args:
+      chunks: {}
+      consolidated: false
+      storage_options:
+        fo: era5/north-america/reanalysis/land/reference.json
+        remote_options: {}
+        remote_protocol: https
+        skip_instance_cache: true
+        target_options:
+          anon: true
+          client_kwargs:
+            endpoint_url: https://s3.wasabisys.com
+            region_name: us-east-1
+        target_protocol: s3
+      urlpath: reference://
+    description: ''
+    driver: intake_xarray.xzarr.ZarrSource
+    
   era5_reanalysis_pressure_levels:
     args:
       consolidated: True
