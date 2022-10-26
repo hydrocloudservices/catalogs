@@ -25,20 +25,15 @@ sources:
   era5_land_reanalysis_spatial:
     args:
       chunks: {}
-      consolidated: false
+      consolidated: False
       storage_options:
-        fo: era5/north-america/reanalysis/land/reference.json
+        fo: https://s3.us-east-1.wasabisys.com/era5/north-america/reanalysis/land/reference.json
         remote_options: {}
         remote_protocol: https
-        skip_instance_cache: true
-        target_options:
-          anon: true
-          client_kwargs:
-            endpoint_url: https://s3.wasabisys.com
-            region_name: us-east-1
-        target_protocol: s3
+        target_protocol: https
+        skip_instance_cache: True
       urlpath: reference://
-    description: ''
+    description: ERA5-Land hourly estimates on single level for spatial analysis
     driver: intake_xarray.xzarr.ZarrSource
     
   era5_reanalysis_pressure_levels:
