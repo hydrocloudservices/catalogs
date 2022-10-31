@@ -1,0 +1,20 @@
+plugins:
+  source:
+  - module: intake_xarray
+sources:
+  pr_rcp45_day_NAM_22i_raw_zarr:
+    args:
+      consolidated: True
+      engine: zarr
+      storage_options:
+        anon: True
+      urlpath:
+      - s3://ncar-na-cordex/day/pr.rcp45.day.NAM-22i.raw.zarr
+    description: NA-Cordex
+    driver: zarr
+    metadata:
+      tags:
+      - ocean
+      - model
+      - atmosphere
+      url: https://na-cordex.org/na-cordex-on-aws.html
