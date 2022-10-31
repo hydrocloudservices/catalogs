@@ -10,6 +10,12 @@ sources:
         anon: True
       urlpath:
       - s3://ncar-na-cordex/day/pr.rcp45.day.NAM-22i.raw.zarr
+      - s3://ncar-na-cordex/day/prcp.rcp45.day.NAM-22i.raw.zarr
+      - s3://ncar-na-cordex/day/tas.rcp45.day.NAM-22i.raw.zarr
+      - s3://ncar-na-cordex/day/tmax.rcp45.day.NAM-22i.raw.zarr
+      - s3://ncar-na-cordex/day/tmin.rcp45.day.NAM-22i.raw.zarr
+      - s3://ncar-na-cordex/day/huss.rcp45.day.NAM-22i.raw.zarr
+      - s3://ncar-na-cordex/day/hurs.rcp45.day.NAM-22i.raw.zarr
     description: NA-Cordex
     driver: zarr
     metadata:
