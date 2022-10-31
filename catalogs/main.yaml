@@ -22,4 +22,11 @@ sources:
     driver: intake.catalog.local.YAMLFileCatalog
     metadata: {}    
     
+  climate_change:
+    args:
+      path: "{{CATALOG_DIR}}/climate_change.yaml"
+    description: 'Climate Change Science Dataset Catalog'
+    driver: intake.catalog.local.YAMLFileCatalog
+    metadata: {}    
+    
     
