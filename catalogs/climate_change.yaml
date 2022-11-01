@@ -2,20 +2,28 @@ plugins:
   source:
   - module: intake_xarray
 sources:
-  pr_rcp45_day_NAM_22i_raw_zarr:
+  rcp45_day_NAM_22i_raw_zarr:
     args:
       consolidated: True
       engine: zarr
       storage_options:
         anon: True
       urlpath:
+      - s3://ncar-na-cordex/day/hurs.rcp45.day.NAM-22i.raw.zarr
+      - s3://ncar-na-cordex/day/huss.rcp45.day.NAM-22i.raw.zarr
       - s3://ncar-na-cordex/day/pr.rcp45.day.NAM-22i.raw.zarr
-      - s3://ncar-na-cordex/day/prcp.rcp45.day.NAM-22i.raw.zarr
+      - s3://ncar-na-cordex/day/prec.rcp45.day.NAM-22i.raw.zarr
+      - s3://ncar-na-cordex/day/ps.rcp45.day.NAM-22i.raw.zarr
+      - s3://ncar-na-cordex/day/rsds.rcp45.day.NAM-22i.raw.zarr
+      - s3://ncar-na-cordex/day/sfcWind.rcp45.day.NAM-22i.raw.zarr
       - s3://ncar-na-cordex/day/tas.rcp45.day.NAM-22i.raw.zarr
+      - s3://ncar-na-cordex/day/tasmax.rcp45.day.NAM-22i.raw.zarr
+      - s3://ncar-na-cordex/day/tasmin.rcp45.day.NAM-22i.raw.zarr
+      - s3://ncar-na-cordex/day/temp.rcp45.day.NAM-22i.raw.zarr
       - s3://ncar-na-cordex/day/tmax.rcp45.day.NAM-22i.raw.zarr
       - s3://ncar-na-cordex/day/tmin.rcp45.day.NAM-22i.raw.zarr
-      - s3://ncar-na-cordex/day/huss.rcp45.day.NAM-22i.raw.zarr
-      - s3://ncar-na-cordex/day/hurs.rcp45.day.NAM-22i.raw.zarr
+      - s3://ncar-na-cordex/day/uas.rcp45.day.NAM-22i.raw.zarr
+      - s3://ncar-na-cordex/day/vas.rcp45.day.NAM-22i.raw.zarr
     description: NA-Cordex
     driver: zarr
     metadata:
