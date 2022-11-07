@@ -22,6 +22,20 @@ sources:
       - atmosphere
       url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels
   
+  era5_reanalysis_single_levels_spatial:
+    args:
+      chunks: {}
+      consolidated: False
+      storage_options:
+        fo: https://s3.us-east-1.wasabisys.com/era5/world/reanalysis/single-levels/reference.json
+        remote_options: {}
+        remote_protocol: https
+        target_protocol: https
+        skip_instance_cache: True
+      urlpath: reference://
+    description: ERA5 hourly estimates of variables on single levels for spatial analysis
+    driver: intake_xarray.xzarr.ZarrSource
+    
   era5_land_reanalysis_spatial:
     args:
       chunks: {}
