@@ -6,13 +6,8 @@ sources:
     args:
       consolidated: True
       engine: zarr
-      storage_options:
-        anon: True
-        client_kwargs:
-          endpoint_url: https://s3.wasabisys.com
-          region_name: us-east-1
       urlpath:
-      - s3://era5/world/reanalysis/single-levels/zarr/timeseries/archive
+      - https://s3.us-east-1.wasabisys.com/era5/world/reanalysis/single-levels/zarr/timeseries/archive
     description: ERA5 hourly estimates of variables on single levels
     driver: zarr
     metadata:
