@@ -32,6 +32,14 @@ sources:
       urlpath: reference://
     description: ERA5 hourly estimates of variables on single levels for spatial analysis
     driver: intake_xarray.xzarr.ZarrSource
+    metadata:
+      tags:
+      - ocean
+      - model
+      - atmosphere
+      status:
+        - dev
+      url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels
     
   era5_land_reanalysis_spatial:
     args:
@@ -46,6 +54,14 @@ sources:
       urlpath: reference://
     description: ERA5-Land hourly estimates on single level for spatial analysis
     driver: intake_xarray.xzarr.ZarrSource
+    metadata:
+      tags:
+      - ocean
+      - model
+      - atmosphere
+      status:
+        - dev
+      url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land
     
   era5_reanalysis_pressure_levels:
     args:
@@ -65,6 +81,8 @@ sources:
       - ocean
       - model
       - atmosphere
+      status:
+        - prod
       url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-pressure-levels
       
   daymet_daily_na:
@@ -80,6 +98,8 @@ sources:
       - ocean
       - model
       - atmosphere
+      status:
+        - prod
       url: http://daymet.ornl.gov/
   ghcnd_world:
     args:
@@ -98,6 +118,8 @@ sources:
       tags:
       - hydrology
       - meteorology
+      status:
+        - dev
       url: https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily   
   scdna:
     args:
@@ -117,6 +139,8 @@ sources:
       - ocean
       - model
       - atmosphere
+      status:
+        - prod
       url: https://zenodo.org/record/3953310
   20_century_reanalysis_single_levels:
     args:
@@ -136,6 +160,8 @@ sources:
       - ocean
       - model
       - atmosphere
+      status:
+        - prod
       url: https://psl.noaa.gov/data/gridded/data.20thC_ReanV3.html
 
   20_century_reanalysis_single_levels_large_area:
@@ -156,6 +182,8 @@ sources:
       - ocean
       - model
       - atmosphere
+      status:
+        - prod
       url: https://psl.noaa.gov/data/gridded/data.20thC_ReanV3.html
 
   20_century_reanalysis_pressure_levels:
@@ -176,6 +204,8 @@ sources:
       - ocean
       - model
       - atmosphere
+      status:
+        - prod
       url: https://psl.noaa.gov/data/gridded/data.20thC_ReanV3.html
       
   20_century_reanalysis_pressure_levels_large_area:
@@ -196,6 +226,8 @@ sources:
       - ocean
       - model
       - atmosphere
+      status:
+        - prod
       url: https://psl.noaa.gov/data/gridded/data.20thC_ReanV3.html
 
   terraclimate:
@@ -211,4 +243,6 @@ sources:
       - ocean
       - model
       - atmosphere
+      status:
+        - prod
       url: http://daymet.ornl.gov/
