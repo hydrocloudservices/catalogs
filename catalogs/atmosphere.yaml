@@ -15,8 +15,8 @@ sources:
       - ocean
       - model
       - atmosphere
-      - status:
-        - dev
+      status:
+        - prod
       url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels
   
   era5_reanalysis_single_levels_spatial:
