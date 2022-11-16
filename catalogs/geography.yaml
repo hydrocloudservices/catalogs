@@ -18,4 +18,6 @@ sources:
       - ocean
       - model
       - atmosphere
+      status:
+        - dev
       url: https://www.cehq.gouv.qc.ca/hydrometrie/
