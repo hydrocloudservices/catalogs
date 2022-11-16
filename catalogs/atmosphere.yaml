@@ -245,4 +245,4 @@ sources:
       - atmosphere
       status:
         - prod
-      url: http://daymet.ornl.gov/
+      url: https://www.climatologylab.org/terraclimate.html
