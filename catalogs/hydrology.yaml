@@ -20,4 +20,6 @@ sources:
       - hydrology
       - model
       - streamflow
+      status:
+        - dev
       url: https://www.cehq.gouv.qc.ca/hydrometrie/historique_donnees/default.asp
