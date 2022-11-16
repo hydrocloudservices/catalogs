@@ -24,7 +24,7 @@ sources:
       - s3://ncar-na-cordex/day/tmin.rcp45.day.NAM-22i.raw.zarr
       - s3://ncar-na-cordex/day/uas.rcp45.day.NAM-22i.raw.zarr
       - s3://ncar-na-cordex/day/vas.rcp45.day.NAM-22i.raw.zarr
-    description: NA-Cordex (limited for rcp45 for now... more to come!)
+    description: NA-Cordex (limited to rcp45 for now... more to come!)
     driver: zarr
     metadata:
       tags:
