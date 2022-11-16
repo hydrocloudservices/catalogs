@@ -31,4 +31,6 @@ sources:
       - ocean
       - model
       - atmosphere
+      status:
+        - dev
       url: https://na-cordex.org/na-cordex-on-aws.html
