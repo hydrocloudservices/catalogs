@@ -8,7 +8,7 @@ sources:
       engine: zarr
       urlpath:
       - https://s3.us-east-1.wasabisys.com/era5/world/reanalysis/single-levels/zarr/timeseries/archive
-    description: ERA5 hourly estimates of variables on single levels
+    description: ERA5 hourly estimates of variables on single levels chunked for time series analysis
     driver: zarr
     metadata:
       tags:
@@ -30,7 +30,7 @@ sources:
         target_protocol: https
         skip_instance_cache: True
       urlpath: reference://
-    description: ERA5 hourly estimates of variables on single levels for spatial analysis
+    description: ERA5 hourly estimates of variables on single levels chunked for spatial analysis
     driver: intake_xarray.xzarr.ZarrSource
     metadata:
       tags:
@@ -52,7 +52,7 @@ sources:
         target_protocol: https
         skip_instance_cache: True
       urlpath: reference://
-    description: ERA5-Land hourly estimates on single level for spatial analysis
+    description: ERA5-Land hourly estimates on single level chunked for spatial analysis
     driver: intake_xarray.xzarr.ZarrSource
     metadata:
       tags:
@@ -153,7 +153,7 @@ sources:
           region_name: us-east-1
       urlpath:
       - s3://cires-20-century-reanalysis-v3/zarr/single-levels
-    description: SCDNA a serially complete precipitation and temperature dataset for North America from 1979 to 2018
+    description: NOAA-CIRES-DOE Twentieth Century Reanalysis (20CR) on single levels spanning 1836 to 2015 chunked for time series analysis
     driver: zarr
     metadata:
       tags:
@@ -175,7 +175,7 @@ sources:
           region_name: us-east-1
       urlpath:
       - s3://cires-20-century-reanalysis-v3/zarr/single-levels-space
-    description: SCDNA a serially complete precipitation and temperature dataset for North America from 1979 to 2018
+    description: NOAA-CIRES-DOE Twentieth Century Reanalysis (20CR) on single levels spanning 1836 to 2015 chunked for spatial analysis
     driver: zarr
     metadata:
       tags:
@@ -197,7 +197,7 @@ sources:
           region_name: us-east-1
       urlpath:
       - s3://cires-20-century-reanalysis-v3/zarr/pressure-levels
-    description: SCDNA a serially complete precipitation and temperature dataset for North America from 1979 to 2018
+    description: NOAA-CIRES-DOE Twentieth Century Reanalysis (20CR) on pressure levels spanning 1836 to 2015 chunked for time series analysis
     driver: zarr
     metadata:
       tags:
@@ -219,7 +219,7 @@ sources:
           region_name: us-east-1
       urlpath:
       - s3://cires-20-century-reanalysis-v3/zarr/pressure-levels-space
-    description: SCDNA a serially complete precipitation and temperature dataset for North America from 1979 to 2018
+    description: NOAA-CIRES-DOE Twentieth Century Reanalysis (20CR) on pressure levels spanning 1836 to 2015 chunked for spatial analysis
     driver: zarr
     metadata:
       tags:
@@ -236,7 +236,7 @@ sources:
       engine: zarr
       urlpath:
       - https://cpdataeuwest.blob.core.windows.net/cpdata/raw/terraclimate/4000m/raster.zarr
-    description: Daymet Data Version 4.0
+    description: TerraClimate is a dataset of monthly climate and climatic water balance for global terrestrial surfaces from 1958-2019
     driver: zarr
     metadata:
       tags:
