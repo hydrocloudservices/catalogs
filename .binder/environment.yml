@@ -1,6 +1,7 @@
 name: catalogs
 channels:
  - conda-forge
+ - pyviz
 dependencies:
  - python=3.8*
  - s3fs
