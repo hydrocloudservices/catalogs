@@ -18,14 +18,6 @@ jobs:
       - name: Install local package
         shell: bash -l {0}
         run: |
-          conda info
-          conda list
-          echo " " >> /usr/share/miniconda/envs/catalogs/lib/python3.8/site-packages/sphinx_holoviz_theme/static/css/main.css_t
-          echo ".dataframe {" >> /usr/share/miniconda/envs/catalogs/lib/python3.8/site-packages/sphinx_holoviz_theme/static/css/main.css_t
-          echo "overflow-y: scroll;" >> /usr/share/miniconda/envs/catalogs/lib/python3.8/site-packages/sphinx_holoviz_theme/static/css/main.css_t
-          echo "display: block;" >> /usr/share/miniconda/envs/catalogs/lib/python3.8/site-packages/sphinx_holoviz_theme/static/css/main.css_t
-          echo "max-height: 400px;" >> /usr/share/miniconda/envs/catalogs/lib/python3.8/site-packages/sphinx_holoviz_theme/static/css/main.css_t          
-          echo "}" >> /usr/share/miniconda/envs/catalogs/lib/python3.8/site-packages/sphinx_holoviz_theme/static/css/main.css_t
           nbsite generate-rst --examples=notebooks/ipynb --project-name=catalogs --doc=doc/notebooks --skip '^.*homepage.*$'
           nbsite build --what=html --output=builtdocs
 
