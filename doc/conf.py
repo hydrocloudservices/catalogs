@@ -18,6 +18,7 @@ extensions = [
     "nbsphinx",
 ]
 
+nbsphinx_kernel_name = 'catalogs'
 nbsphinx_execute = 'always'
 
 
