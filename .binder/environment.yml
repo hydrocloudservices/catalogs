@@ -1,10 +1,17 @@
-name: era5-forge
+name: catalogs
 channels:
  - conda-forge
 dependencies:
  - python=3.8*
  - s3fs
  - dask
+ - xoak
+ - xarray
+ - numpy
+ - intake
+ - intake-xarray
+ - intake-geopandas
+ - hvplot
  - fsspec
  - intake-xarray
  - pyyaml
