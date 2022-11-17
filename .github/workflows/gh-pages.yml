@@ -18,6 +18,7 @@ jobs:
       - name: Install local package
         shell: bash -l {0}
         run: |
+          python -m ipykernel install --user --name=catalogs
           make html
 
       - name: Deploy 🚀
