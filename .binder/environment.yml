@@ -19,3 +19,10 @@ dependencies:
  - nbsphinx
  - pandoc
  - ipython
+ - ipykernel
+ - bokeh=2.4.3
+ - geoviews
+ - cartopy
+ - pip:
+   - sphinx-pangeo-theme
+   - furo

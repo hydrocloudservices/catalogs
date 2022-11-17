@@ -18,7 +18,24 @@ sources:
       status:
         - prod
       url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels
-  
+
+  era5_land_reanalysis:
+    args:
+      consolidated: True
+      engine: zarr
+      urlpath:
+      - https://s3.us-east-1.wasabisys.com/era5/north-america/reanalysis/land/zarr/time-series
+    description: ERA5-Land hourly estimates of variables on single levels chunked for time series analysis
+    driver: zarr
+    metadata:
+      tags:
+      - ocean
+      - model
+      - atmosphere
+      status:
+        - prod
+      url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land
+      
   era5_reanalysis_single_levels_spatial:
     args:
       chunks: {}
