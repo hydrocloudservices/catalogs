@@ -18,3 +18,4 @@ dependencies:
  - pyyaml
  - nbsite
  - sphinx_holoviz_theme
+ - myst-nb
