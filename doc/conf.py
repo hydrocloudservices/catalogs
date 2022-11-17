@@ -30,6 +30,6 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'sphinx-pangeo-theme'
+html_theme = 'furo'
 html_static_path = ['_static']
 html_style = 'custom.css'
