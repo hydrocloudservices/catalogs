@@ -22,20 +22,11 @@ jobs:
           pip install -e .
       - shell: bash -l {0}
         run: |
-          conda info
-          conda list
-          echo " " >> /usr/share/miniconda/envs/catalogs//lib/python3.8/site-packages/sphinx_holoviz_theme/static/css/main.css_t
-          echo ".dataframe {" >> /usr/share/miniconda/envs/catalogs//lib/python3.8/site-packages/sphinx_holoviz_theme/static/css/main.css_t
-          echo "overflow-y: scroll;" >> /usr/share/miniconda/envs/catalogs//lib/python3.8/site-packages/sphinx_holoviz_theme/static/css/main.css_t
-          echo "display: block;" >> /usr/share/miniconda/envs/catalogs//lib/python3.8/site-packages/sphinx_holoviz_theme/static/css/main.css_t
-          echo "max-height: 400px;" >> /usr/share/miniconda/envs/catalogs//lib/python3.8/site-packages/sphinx_holoviz_theme/static/css/main.css_t          
-          echo "}" >> /usr/share/miniconda/envs/catalogs//lib/python3.8/site-packages/sphinx_holoviz_theme/static/css/main.css_t
-          nbsite generate-rst --examples=notebooks/ipynb --project-name=catalogs --doc=doc/notebooks --skip '^.*homepage.*$'
-          nbsite build --what=html --output=builtdocs
+          make html
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.7
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: builtdocs # The folder the action should deploy.
+          FOLDER: build # The folder the action should deploy.
