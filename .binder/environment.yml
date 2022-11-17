@@ -25,3 +25,4 @@ dependencies:
  - cartopy
  - pip:
    - sphinx-pangeo-theme
+   - furo
