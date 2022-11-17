@@ -1,6 +1,7 @@
 name: catalogs
 channels:
  - conda-forge
+ - pyviz
 dependencies:
  - python=3.8*
  - s3fs
@@ -15,3 +16,6 @@ dependencies:
  - fsspec
  - intake-xarray
  - pyyaml
+ - nbsite
+ - sphinx_holoviz_theme
+ - myst-nb
