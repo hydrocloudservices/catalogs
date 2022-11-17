@@ -16,6 +16,6 @@ dependencies:
  - fsspec
  - intake-xarray
  - pyyaml
- - nbsite
- - sphinx_holoviz_theme
- - myst-nb
+ - nbsphinx
+ - pandoc
+ - ipython
