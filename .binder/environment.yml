@@ -17,7 +17,4 @@ dependencies:
  - intake-xarray
  - pyyaml
  - nbsite
- - jupyter-panel-proxy
- - jupyter_contrib_nbextensions
- - jupyter_nbextensions_configurator
  - sphinx_holoviz_theme
