@@ -1,1 +1,9 @@
 /* This file intentionally left blank. */
+---
+---
+
+@import "{{ site.theme }}";
+
+.inner {
+  max-width: 95%;
+}
