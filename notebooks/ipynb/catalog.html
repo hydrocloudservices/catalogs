@@ -465,6 +465,7 @@ with the ever-increasing size of geospatial datasets, most modern datasets canno
 </ul>
 <p>For more information, please refer to the <a class="reference external" href="https://pangeo.io/">pangeo’s website</a>.</p>
 <p>It is important to keep in mind that most datasets in the catalogue have language-agnostic formats (such as Zarr, netcdfs, geojson, etc.), making them accessible through a variety of programming languages (including Python, Julia, Javascript, C, etc.) that implement the specifications for these formats.</p>
+<p>The current catalog is presented below in a table format. A dataset should be used after consulting the status field. If a dataset has a “dev” flag, it signifies that we are actively working on it and do not recommend using it. It is production-ready if it has a “prod” flag. The “prod” label signifies that the dataset has undergone quality review and testing, however users should always double-check on their own because errors are still possible.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -576,7 +577,7 @@ var element = document.currentScript.previousSibling.previousSibling;
 }
 </style>
 <div class="itables">
-<table id="e6107a1e-cb1a-4b73-bd9d-71e51b2ace67" class="display"style="width:auto;"><caption>Countries from the World Bank Database</caption><thead>
+<table id="5af16484-5bfa-4378-a04b-97f496d83aa9" class="display"style="width:auto;"><caption>Countries from the World Bank Database</caption><thead>
     <tr style="text-align: right;">
 
       <th>field</th>
@@ -613,7 +614,7 @@ var element = document.currentScript.previousSibling.previousSibling;
         // Display the table
         $(document).ready(function () {
             // Setup - add a text input to each header or footer cell
-$('#e6107a1e-cb1a-4b73-bd9d-71e51b2ace67 tfoot th').each(function () {
+$('#5af16484-5bfa-4378-a04b-97f496d83aa9 tfoot th').each(function () {
     let title = $(this).text();
     $(this).html('<input type="text" placeholder="Search ' +
         // We use encodeURI to avoid this LGTM error:
@@ -622,7 +623,7 @@ $('#e6107a1e-cb1a-4b73-bd9d-71e51b2ace67 tfoot th').each(function () {
         '" />');
 });
 
-            window.__itables_render('#e6107a1e-cb1a-4b73-bd9d-71e51b2ace67', dt_args);
+            window.__itables_render('#5af16484-5bfa-4378-a04b-97f496d83aa9', dt_args);
         });
     }
 </script>
@@ -646,14 +647,6 @@ function code_toggle() {
 $( document ).ready(code_toggle);
 </script>
 <form action="javascript:code_toggle()"><input type="submit" value=""></form></div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </div>
 </section>
 
