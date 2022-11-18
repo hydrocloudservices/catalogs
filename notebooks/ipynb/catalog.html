@@ -469,7 +469,10 @@ with the ever-increasing size of geospatial datasets, most modern datasets canno
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">IPython.core.display</span> <span class="k">as</span> <span class="nn">di</span> <span class="c1"># Example: di.display_html(&#39;&lt;h3&gt;%s:&lt;/h3&gt;&#39; % str, raw=True)</span>
+<span class="n">di</span><span class="o">.</span><span class="n">display_html</span><span class="p">(</span><span class="s1">&#39;&lt;script&gt;jQuery(function() {if (jQuery(&quot;body.notebook_app&quot;).length == 0) { jQuery(&quot;.input_area&quot;).toggle(); jQuery(&quot;.prompt&quot;).toggle();}});&lt;/script&gt;&#39;</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">intake</span>
 <span class="kn">from</span> <span class="nn">itables</span> <span class="kn">import</span> <span class="n">init_notebook_mode</span><span class="p">,</span> <span class="n">show</span>
 
@@ -494,6 +497,12 @@ with the ever-increasing size of geospatial datasets, most modern datasets canno
      <span class="n">dom</span><span class="o">=</span><span class="s2">&quot;lrtip&quot;</span><span class="p">)</span>
 <br/></pre></div>
 </div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script>jQuery(function() {if (jQuery("body.notebook_app").length == 0) { jQuery(".input_area").toggle(); jQuery(".prompt").toggle();}});</script></div>
 </div>
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
@@ -560,7 +569,7 @@ var element = document.currentScript.previousSibling.previousSibling;
 }
 </style>
 <div class="itables">
-<table id="212d752f-5cf9-48eb-9ffa-176525643bf3" class="display"style="width:auto;"><caption>Countries from the World Bank Database</caption><thead>
+<table id="f0d1080e-9ca5-4793-b8bc-7a0d481298f7" class="display"style="width:auto;"><caption>Countries from the World Bank Database</caption><thead>
     <tr style="text-align: right;">
 
       <th>field</th>
@@ -597,7 +606,7 @@ var element = document.currentScript.previousSibling.previousSibling;
         // Display the table
         $(document).ready(function () {
             // Setup - add a text input to each header or footer cell
-$('#212d752f-5cf9-48eb-9ffa-176525643bf3 tfoot th').each(function () {
+$('#f0d1080e-9ca5-4793-b8bc-7a0d481298f7 tfoot th').each(function () {
     let title = $(this).text();
     $(this).html('<input type="text" placeholder="Search ' +
         // We use encodeURI to avoid this LGTM error:
@@ -606,7 +615,7 @@ $('#212d752f-5cf9-48eb-9ffa-176525643bf3 tfoot th').each(function () {
         '" />');
 });
 
-            window.__itables_render('#212d752f-5cf9-48eb-9ffa-176525643bf3', dt_args);
+            window.__itables_render('#f0d1080e-9ca5-4793-b8bc-7a0d481298f7', dt_args);
         });
     }
 </script>

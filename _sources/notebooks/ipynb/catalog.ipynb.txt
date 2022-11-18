@@ -22,9 +22,18 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 2,
+   "execution_count": 4,
    "metadata": {},
    "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<script>jQuery(function() {if (jQuery(\"body.notebook_app\").length == 0) { jQuery(\".input_area\").toggle(); jQuery(\".prompt\").toggle();}});</script>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
     {
      "data": {
       "application/javascript": [
@@ -102,7 +111,7 @@
        "}\n",
        "</style>\n",
        "<div class=\"itables\">\n",
-       "<table id=\"0f82c190-7d47-4207-91c6-25981c9c303e\" class=\"display\"style=\"width:auto;\"><caption>Countries from the World Bank Database</caption><thead>\n",
+       "<table id=\"ed2fad50-b0b3-42c7-a0c8-a01e515aa804\" class=\"display\"style=\"width:auto;\"><caption>Countries from the World Bank Database</caption><thead>\n",
        "    <tr style=\"text-align: right;\">\n",
        "      \n",
        "      <th>field</th>\n",
@@ -139,7 +148,7 @@
        "        // Display the table\n",
        "        $(document).ready(function () {\n",
        "            // Setup - add a text input to each header or footer cell\n",
-       "$('#0f82c190-7d47-4207-91c6-25981c9c303e tfoot th').each(function () {\n",
+       "$('#ed2fad50-b0b3-42c7-a0c8-a01e515aa804 tfoot th').each(function () {\n",
        "    let title = $(this).text();\n",
        "    $(this).html('<input type=\"text\" placeholder=\"Search ' +\n",
        "        // We use encodeURI to avoid this LGTM error:\n",
@@ -148,7 +157,7 @@
        "        '\" />');\n",
        "});\n",
        "\n",
-       "            window.__itables_render('#0f82c190-7d47-4207-91c6-25981c9c303e', dt_args);\n",
+       "            window.__itables_render('#ed2fad50-b0b3-42c7-a0c8-a01e515aa804', dt_args);\n",
        "        });\n",
        "    }\n",
        "</script>\n",
@@ -163,6 +172,9 @@
     }
    ],
    "source": [
+    "import IPython.core.display as di # Example: di.display_html('<h3>%s:</h3>' % str, raw=True)\n",
+    "di.display_html('<script>jQuery(function() {if (jQuery(\"body.notebook_app\").length == 0) { jQuery(\".input_area\").toggle(); jQuery(\".prompt\").toggle();}});</script>', raw=True)\n",
+    "\n",
     "import pandas as pd\n",
     "import intake\n",
     "from itables import init_notebook_mode, show\n",
