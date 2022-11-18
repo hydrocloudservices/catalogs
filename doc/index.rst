@@ -17,7 +17,7 @@ This project was born out of a fundamental need to share common data sources whe
    :maxdepth: 1
    :caption: Contents:
 
-   catalog
+   notebooks/ipynb/catalog
    notebooks/ipynb/index.rst
 
 Indices and tables
