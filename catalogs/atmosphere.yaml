@@ -33,7 +33,7 @@ sources:
       - model
       - atmosphere
       status:
-        - prod
+        - dev
       url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land
       
   era5_reanalysis_single_levels_spatial:
