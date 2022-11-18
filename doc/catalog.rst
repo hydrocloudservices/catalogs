@@ -14,3 +14,5 @@ The catalog presented here consists of large-scale analysis-ready cloud optimize
 For more information, please refer to the `pangeo's website <https://pangeo.io/>`_.
 
 It is important to keep in mind that most datasets in the catalogue have language-agnostic formats (such as Zarr, netcdfs, geojson, etc.), making them accessible through a variety of programming languages (including Python, Julia, Javascript, C, etc.) that implement the specifications for these formats.
+
+   atmosphere

@@ -23,6 +23,7 @@ dependencies:
  - bokeh=2.4.3
  - geoviews
  - cartopy
+ - itables
  - pip:
    - sphinx-pangeo-theme
    - furo
