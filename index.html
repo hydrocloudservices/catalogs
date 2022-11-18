@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Accessing geospatial data the easy way (Python)" href="notebooks/ipynb/python.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Catalog" href="catalog.html" />
 
     <meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/>
         <title>catalogs 0.0.1 documentation</title>
@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -156,6 +156,7 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="catalog.html">Catalog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/ipynb/python.html">Accessing geospatial data the easy way (Python)</a></li>
 </ul>
 
@@ -185,20 +186,27 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="welcome-to-catalogs-s-documentation">
-<h1>Welcome to catalogs’s documentation!<a class="headerlink" href="#welcome-to-catalogs-s-documentation" title="Permalink to this heading">#</a></h1>
+          <section id="eo-catalog-documentation">
+<h1>EO-catalog documentation<a class="headerlink" href="#eo-catalog-documentation" title="Permalink to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>eo-catalog is a catalog of Earth observation big data whose objective is to facilitate access to data by an exhaustive documentation of the steps required to get there.</p>
+<p>This project does not want to reinvent the wheel. We use technologies that are already well established in the field of earth observation to format and organize our datasets (intake, STAC, zarr, netcdf, etc.). When not required, we don’t change anything in a dataset, we just point to the original provider’s servers. What we do however is that for each dataset, we want to show the steps required to access it in multiple programming languages.</p>
+<p>This project was born out of a fundamental need to share common data sources when we were doing research. We collaborate with researchers, engineers, data scientists from academia to industry. In multidisciplinary projects, we have experienced difficulties in sharing and working on large common datasets. Although the centralization of data brought by cloud computing has made this task easier for us, the fact remains that there is still a significant learning curve to interact with these datasets and that the documentation to achieve this via different programming languages is sometimes limited.</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="catalog.html">Catalog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/ipynb/python.html">Accessing geospatial data the easy way (Python)</a></li>
 </ul>
 </div>
+</section>
 </section>
 <section id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">#</a></h1>
@@ -214,12 +222,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="notebooks/ipynb/python.html">
+          <a class="next-page" href="catalog.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Accessing geospatial data the easy way (Python)</div>
+                <div class="title">Catalog</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -244,8 +252,28 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">EO-catalog documentation</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
