@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Catalog" href="catalog.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
 
     <meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/>
         <title>catalogs 0.0.1 documentation</title>
@@ -154,12 +154,7 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="catalog.html">Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/ipynb/python.html">Accessing geospatial data the easy way (Python)</a></li>
-</ul>
-
+  
 </div>
 </div>
 
@@ -197,14 +192,15 @@
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>eo-catalog is a catalog of Earth observation big data whose objective is to facilitate access to data by an exhaustive documentation of the steps required to get there.</p>
-<p>This project does not want to reinvent the wheel. We use technologies that are already well established in the field of earth observation to format and organize our datasets (intake, STAC, zarr, netcdf, etc.). When not required, we don’t change anything in a dataset, we just point to the original provider’s servers. What we do however is that for each dataset, we want to show the steps required to access it in multiple programming languages.</p>
-<p>This project was born out of a fundamental need to share common data sources when we were doing research. We collaborate with researchers, engineers, data scientists from academia to industry. In multidisciplinary projects, we have experienced difficulties in sharing and working on large common datasets. Although the centralization of data brought by cloud computing has made this task easier for us, the fact remains that there is still a significant learning curve to interact with these datasets and that the documentation to achieve this via different programming languages is sometimes limited.</p>
-<div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="catalog.html">Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/ipynb/python.html">Accessing geospatial data the easy way (Python)</a></li>
-</ul>
+<p>This project does not want to reinvent the wheel. We use technologies that are already well established in the field of earth observation to format and organize our datasets (intake, STAC, zarr, netcdf, etc.). When not required, we don’t change anything in a dataset, we just point to the original provider’s servers. What we do however is that we maintain one single catalog from multiple providers and for each dataset, we document the steps required to access it in multiple programming languages. For some datasets, we also take extra steps such as rechunking the data, deaggregate or decumulate some variables, all to make life easier for users.</p>
+<p>This project was born out of a fundamental need to share common data sources when we were doing research. We collaborate with researchers, engineers, data scientists from academia to industry. In multidisciplinary projects, we have experienced difficulties in sharing and working on large common datasets. Although the centralization of data brought by cloud computing has made this task easier for us, the fact remains that there is still a significant learning curve to interact with these datasets and that the documentation to achieve this via different programming languages is sometimes limited.
+.. toctree:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">maxdepth</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">Contents</span><span class="p">:</span>
+
+<span class="n">catalog</span>
+<span class="n">notebooks</span><span class="o">/</span><span class="n">ipynb</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">rst</span>
+</pre></div>
 </div>
 </section>
 </section>
@@ -222,15 +218,7 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="catalog.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Catalog</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
+          
           
         </div>
         <div class="bottom-of-page">
