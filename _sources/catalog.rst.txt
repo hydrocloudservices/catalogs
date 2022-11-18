@@ -11,6 +11,6 @@ The catalog presented here consists of large-scale analysis-ready cloud optimize
 - `Dask <https://docs.dask.org/en/stable/>`_  (or alternatively Spark, Ray, Distributed) : distributed computing and lazy loading
 - `Intake <https://intake.readthedocs.io/en/latest>`_ Catalogs (or alternatively STAC) : a general interface for loading different data formats, mostly but not limited to spatiotemporal assets
 
-For more information, please refer to the [pangeo's website](https://pangeo.io/).
+For more information, please refer to the `pangeo's website <https://pangeo.io/>`_.
 
 It is important to keep in mind that most datasets in the catalogue have language-agnostic formats (such as Zarr, netcdfs, geojson, etc.), making them accessible through a variety of programming languages (including Python, Julia, Javascript, C, etc.) that implement the specifications for these formats.
