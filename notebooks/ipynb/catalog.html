@@ -492,7 +492,7 @@ with the ever-increasing size of geospatial datasets, most modern datasets canno
 <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;field&#39;</span><span class="p">)</span> \
 <span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">show</span><span class="p">(</span><span class="n">df</span><span class="p">,</span>
-     <span class="n">tags</span><span class="o">=</span><span class="s2">&quot;&lt;caption&gt;Countries from the World Bank Database&lt;/caption&gt;&quot;</span><span class="p">,</span>
+     <span class="n">tags</span><span class="o">=</span><span class="s2">&quot;&lt;caption&gt;Catalog&lt;/caption&gt;&quot;</span><span class="p">,</span>
      <span class="n">column_filters</span><span class="o">=</span><span class="s2">&quot;footer&quot;</span><span class="p">,</span>
      <span class="n">dom</span><span class="o">=</span><span class="s2">&quot;lrtip&quot;</span><span class="p">)</span>
 
@@ -500,9 +500,9 @@ with the ever-increasing size of geospatial datasets, most modern datasets canno
 <span class="s1">code_show=true;</span>
 <span class="s1">function code_toggle() {</span>
 <span class="s1"> if (code_show){</span>
-<span class="s1"> $(&#39;div.input&#39;).hide();</span>
+<span class="s1"> $(&#39;div.input_area&#39;).hide();</span>
 <span class="s1"> } else {</span>
-<span class="s1"> $(&#39;div.input&#39;).show();</span>
+<span class="s1"> $(&#39;div.input_area&#39;).show();</span>
 <span class="s1"> }</span>
 <span class="s1"> code_show = !code_show</span>
 <span class="s1">}</span>
@@ -577,7 +577,7 @@ var element = document.currentScript.previousSibling.previousSibling;
 }
 </style>
 <div class="itables">
-<table id="5af16484-5bfa-4378-a04b-97f496d83aa9" class="display"style="width:auto;"><caption>Countries from the World Bank Database</caption><thead>
+<table id="52da1075-5dbc-4aa9-bc32-4a9805401d95" class="display"style="width:auto;"><caption>Catalog</caption><thead>
     <tr style="text-align: right;">
 
       <th>field</th>
@@ -614,7 +614,7 @@ var element = document.currentScript.previousSibling.previousSibling;
         // Display the table
         $(document).ready(function () {
             // Setup - add a text input to each header or footer cell
-$('#5af16484-5bfa-4378-a04b-97f496d83aa9 tfoot th').each(function () {
+$('#52da1075-5dbc-4aa9-bc32-4a9805401d95 tfoot th').each(function () {
     let title = $(this).text();
     $(this).html('<input type="text" placeholder="Search ' +
         // We use encodeURI to avoid this LGTM error:
@@ -623,7 +623,7 @@ $('#5af16484-5bfa-4378-a04b-97f496d83aa9 tfoot th').each(function () {
         '" />');
 });
 
-            window.__itables_render('#5af16484-5bfa-4378-a04b-97f496d83aa9', dt_args);
+            window.__itables_render('#52da1075-5dbc-4aa9-bc32-4a9805401d95', dt_args);
         });
     }
 </script>
@@ -638,15 +638,23 @@ $('#5af16484-5bfa-4378-a04b-97f496d83aa9 tfoot th').each(function () {
 code_show=true;
 function code_toggle() {
  if (code_show){
- $('div.input').hide();
+ $('div.input_area').hide();
  } else {
- $('div.input').show();
+ $('div.input_area').show();
  }
  code_show = !code_show
 }
 $( document ).ready(code_toggle);
 </script>
 <form action="javascript:code_toggle()"><input type="submit" value=""></form></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
 </div>
 </section>
 
