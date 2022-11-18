@@ -7,9 +7,9 @@ The access to geospatial data has changed significantly over the past decade. Da
 The catalog presented here consists of large-scale analysis-ready cloud optimized (ARCO) datasets. In order to implement an entry point for these datasets, we have followed the methodology developed by the Pangeo community, which combines multiple technologies:
 
 - Data Lake (or S3, Azure Data Lake Storage, GCS, etc.) : distributed file-object storage
-- [Zarr](https://zarr.readthedocs.io/en/stable/) (or alternatively TileDB, COGs) : chunked N-dimensionnal array formats
-- [Dask](https://docs.dask.org/en/stable/)  (or alternatively Spark, Ray, Distributed) : distributed computing and lazy loading
-- [Intake](https://intake.readthedocs.io/en/latest) Catalogs (or alternatively STAC) : a general interface for loading different data formats, mostly but not limited to spatiotemporal assets
+- `Zarr <https://zarr.readthedocs.io/en/stable/>`_ (or alternatively TileDB, COGs) : chunked N-dimensionnal array formats
+- `Dask <https://docs.dask.org/en/stable/>`_  (or alternatively Spark, Ray, Distributed) : distributed computing and lazy loading
+- `Intake <https://intake.readthedocs.io/en/latest>`_ Catalogs (or alternatively STAC) : a general interface for loading different data formats, mostly but not limited to spatiotemporal assets
 
 For more information, please refer to the [pangeo's website](https://pangeo.io/).
 

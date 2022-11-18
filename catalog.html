@@ -201,9 +201,9 @@
 <p>The catalog presented here consists of large-scale analysis-ready cloud optimized (ARCO) datasets. In order to implement an entry point for these datasets, we have followed the methodology developed by the Pangeo community, which combines multiple technologies:</p>
 <ul class="simple">
 <li><p>Data Lake (or S3, Azure Data Lake Storage, GCS, etc.) : distributed file-object storage</p></li>
-<li><p>[Zarr](<a class="reference external" href="https://zarr.readthedocs.io/en/stable/">https://zarr.readthedocs.io/en/stable/</a>) (or alternatively TileDB, COGs) : chunked N-dimensionnal array formats</p></li>
-<li><p>[Dask](<a class="reference external" href="https://docs.dask.org/en/stable/">https://docs.dask.org/en/stable/</a>)  (or alternatively Spark, Ray, Distributed) : distributed computing and lazy loading</p></li>
-<li><p>[Intake](<a class="reference external" href="https://intake.readthedocs.io/en/latest">https://intake.readthedocs.io/en/latest</a>) Catalogs (or alternatively STAC) : a general interface for loading different data formats, mostly but not limited to spatiotemporal assets</p></li>
+<li><p><a class="reference external" href="https://zarr.readthedocs.io/en/stable/">Zarr</a> (or alternatively TileDB, COGs) : chunked N-dimensionnal array formats</p></li>
+<li><p><a class="reference external" href="https://docs.dask.org/en/stable/">Dask</a>  (or alternatively Spark, Ray, Distributed) : distributed computing and lazy loading</p></li>
+<li><p><a class="reference external" href="https://intake.readthedocs.io/en/latest">Intake</a> Catalogs (or alternatively STAC) : a general interface for loading different data formats, mostly but not limited to spatiotemporal assets</p></li>
 </ul>
 <p>For more information, please refer to the [pangeo’s website](<a class="reference external" href="https://pangeo.io/">https://pangeo.io/</a>).</p>
 <p>It is important to keep in mind that most datasets in the catalogue have language-agnostic formats (such as Zarr, netcdfs, geojson, etc.), making them accessible through a variety of programming languages (including Python, Julia, Javascript, C, etc.) that implement the specifications for these formats.</p>
