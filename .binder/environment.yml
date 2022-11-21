@@ -19,7 +19,7 @@ dependencies:
  - nbsphinx
  - pandoc
  - ipython
- - ipykernel
+ - ipykernel=6.17.1
  - bokeh=2.4.3
  - geoviews
  - cartopy
