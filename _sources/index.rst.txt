@@ -7,7 +7,7 @@ EO-catalog documentation
 ====================================
 Introduction
 --------
-eo-catalog is a project whose objective is to facilitate access to Earth observation big data by centralizing access points via a single catalog.
+eo-catalog is a project whose objective is to facilitate access to Earth observation big data by centralizing access via a single catalog.
 
 This project does not want to reinvent the wheel. We use technologies that are already well established in the field of earth observation to format and organize our datasets (intake, STAC, zarr, netcdf, etc.). When not required, we don't change anything in a dataset, we just point to the original provider's servers. What we do however is that we maintain one single catalog from multiple providers and for each dataset, we document the steps required to access it in multiple programming languages (focusing on Python for now, but eventually Julia and R). For some datasets, we also take extra steps such as rechunking the data, deaggregate or decumulate some variables, all to make life easier for users.
 
