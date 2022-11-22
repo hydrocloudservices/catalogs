@@ -28,6 +28,7 @@ dependencies:
  - seaborn
  - tqdm
  - matplotlib
+ - gcsfs
  - pip:
    - sphinx-pangeo-theme
    - furo
