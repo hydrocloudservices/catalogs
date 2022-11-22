@@ -6,3 +6,4 @@ Accessing geospatial data the easy way (Python)
    :maxdepth: 1
 
    atmosphere
+   climate_change
