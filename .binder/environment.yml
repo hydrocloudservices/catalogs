@@ -12,6 +12,7 @@ dependencies:
  - intake
  - intake-xarray
  - intake-geopandas
+ - intake-esm
  - hvplot
  - fsspec
  - intake-xarray
@@ -24,6 +25,9 @@ dependencies:
  - geoviews
  - cartopy
  - itables
+ - seaborn
+ - tqdm
+ - matplotlib
  - pip:
    - sphinx-pangeo-theme
    - furo
