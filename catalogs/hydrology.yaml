@@ -25,7 +25,7 @@ sources:
       url: https://www.cehq.gouv.qc.ca/hydrometrie/historique_donnees/default.asp
   hydat:
     args:
-      consolidated: True
+      consolidated: False
       engine: zarr
       storage_options:
         anon: True
