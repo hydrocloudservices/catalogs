@@ -578,7 +578,7 @@ var element = document.currentScript.previousSibling.previousSibling;
 }
 </style>
 <div class="itables">
-<table id="9b5fe96b-1aeb-4d89-894d-d0496740e96c" class="display"style="width:auto;"><caption>Catalog</caption><thead>
+<table id="2b74923f-7df6-493a-a3dd-17162137f3cc" class="display"style="width:auto;"><caption>Catalog</caption><thead>
     <tr style="text-align: right;">
 
       <th>field</th>
@@ -592,7 +592,7 @@ var element = document.currentScript.previousSibling.previousSibling;
     // to avoid conflicts between the various tables' data & dt_args
     {
         // Define the table data
-        const data = [["atmosphere", "era5_reanalysis_single_levels", "ERA5 hourly estimates of variables on single levels chunked for time series analysis", "prod"], ["atmosphere", "era5_land_reanalysis", "ERA5-Land hourly estimates of variables on single levels chunked for time series analysis", "dev"], ["atmosphere", "era5_reanalysis_single_levels_spatial", "ERA5 hourly estimates of variables on single levels chunked for spatial analysis", "dev"], ["atmosphere", "era5_land_reanalysis_spatial", "ERA5-Land hourly estimates on single level chunked for spatial analysis", "dev"], ["atmosphere", "era5_reanalysis_pressure_levels", "ERA5 hourly estimates of variables on pressure levels", "prod"], ["atmosphere", "daymet_daily_na", "Daymet Data Version 4.0", "prod"], ["atmosphere", "ghcnd_world", "Global Historical Climatology Network daily (GHCNd)", "dev"], ["atmosphere", "scdna", "SCDNA a serially complete precipitation and temperature dataset for North America from 1979 to 2018", "prod"], ["atmosphere", "20_century_reanalysis_single_levels", "NOAA-CIRES-DOE Twentieth Century Reanalysis (20CR) on single levels spanning 1836 to 2015 chunked for time series analysis", "prod"], ["atmosphere", "20_century_reanalysis_single_levels_large_area", "NOAA-CIRES-DOE Twentieth Century Reanalysis (20CR) on single levels spanning 1836 to 2015 chunked for spatial analysis", "prod"], ["atmosphere", "20_century_reanalysis_pressure_levels", "NOAA-CIRES-DOE Twentieth Century Reanalysis (20CR) on pressure levels spanning 1836 to 2015 chunked for time series analysis", "prod"], ["atmosphere", "20_century_reanalysis_pressure_levels_large_area", "NOAA-CIRES-DOE Twentieth Century Reanalysis (20CR) on pressure levels spanning 1836 to 2015 chunked for spatial analysis", "prod"], ["atmosphere", "terraclimate", "TerraClimate is a dataset of monthly climate and climatic water balance for global terrestrial surfaces from 1958-2019", "prod"], ["climate_change", "rcp45_day_NAM_22i_raw_zarr", "NA-Cordex (limited to rcp45 for now... more to come!)", "dev"], ["geography", "melcc_polygons", "MELCC basin delimitation", "dev"], ["hydrology", "melcc", "CEHQ daily flow and water levels", "dev"]];
+        const data = [["atmosphere", "ghcnd_world", "Global Historical Climatology Network daily (GHCNd)", "dev"], ["atmosphere", "terraclimate", "TerraClimate is a dataset of monthly climate and climatic water balance for global terrestrial surfaces from 1958-2019", "prod"], ["atmosphere", "era5_reanalysis_single_levels", "ERA5 hourly estimates of variables on single levels chunked for time series analysis", "prod"], ["atmosphere", "era5_land_reanalysis", "ERA5-Land hourly estimates of variables on single levels chunked for time series analysis", "dev"], ["atmosphere", "era5_reanalysis_single_levels_spatial", "ERA5 hourly estimates of variables on single levels chunked for spatial analysis", "dev"], ["atmosphere", "era5_land_reanalysis_spatial", "ERA5-Land hourly estimates on single level chunked for spatial analysis", "dev"], ["atmosphere", "era5_reanalysis_pressure_levels", "ERA5 hourly estimates of variables on pressure levels", "prod"], ["atmosphere", "daymet_daily_na", "Daymet Data Version 4.0", "prod"], ["atmosphere", "20_century_reanalysis_pressure_levels_large_area", "NOAA-CIRES-DOE Twentieth Century Reanalysis (20CR) on pressure levels spanning 1836 to 2015 chunked for spatial analysis", "prod"], ["atmosphere", "scdna", "SCDNA a serially complete precipitation and temperature dataset for North America from 1979 to 2018", "prod"], ["atmosphere", "20_century_reanalysis_single_levels", "NOAA-CIRES-DOE Twentieth Century Reanalysis (20CR) on single levels spanning 1836 to 2015 chunked for time series analysis", "prod"], ["atmosphere", "20_century_reanalysis_single_levels_large_area", "NOAA-CIRES-DOE Twentieth Century Reanalysis (20CR) on single levels spanning 1836 to 2015 chunked for spatial analysis", "prod"], ["atmosphere", "20_century_reanalysis_pressure_levels", "NOAA-CIRES-DOE Twentieth Century Reanalysis (20CR) on pressure levels spanning 1836 to 2015 chunked for time series analysis", "prod"], ["climate_change", "rcp45_day_NAM_22i_raw_zarr", "NA-Cordex (limited to rcp45 for now... more to come!)", "dev"], ["geography", "melcc_polygons", "MELCC basin delimitation", "dev"], ["hydrology", "hydat", "HYDAT daily flow and water levels", "dev"], ["hydrology", "melcc", "CEHQ daily flow and water levels", "dev"]];
 
         // Define the dt_args
         let dt_args = {"dom": "lrtip", "warn_on_unexpected_types": true, "order": [], "initComplete": function () {
@@ -615,7 +615,7 @@ var element = document.currentScript.previousSibling.previousSibling;
         // Display the table
         $(document).ready(function () {
             // Setup - add a text input to each header or footer cell
-$('#9b5fe96b-1aeb-4d89-894d-d0496740e96c tfoot th').each(function () {
+$('#2b74923f-7df6-493a-a3dd-17162137f3cc tfoot th').each(function () {
     let title = $(this).text();
     $(this).html('<input type="text" placeholder="Search ' +
         // We use encodeURI to avoid this LGTM error:
@@ -624,7 +624,7 @@ $('#9b5fe96b-1aeb-4d89-894d-d0496740e96c tfoot th').each(function () {
         '" />');
 });
 
-            window.__itables_render('#9b5fe96b-1aeb-4d89-894d-d0496740e96c', dt_args);
+            window.__itables_render('#2b74923f-7df6-493a-a3dd-17162137f3cc', dt_args);
         });
     }
 </script>
