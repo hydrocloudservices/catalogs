@@ -6,13 +6,8 @@ sources:
     args:
       consolidated: True
       engine: zarr
-      storage_options:
-        anon: True
-        client_kwargs:
-          endpoint_url: https://s3.wasabisys.com
-          region_name: us-east-1
       urlpath:
-      - s3://hydrometric/quebec/cehq/zarr/test-timeseries
+      - https://s3.us-east-1.wasabisys.com/hydrometric/quebec/cehq/zarr/test-timeseries
     description: CEHQ daily flow and water levels
     driver: zarr
     metadata:
