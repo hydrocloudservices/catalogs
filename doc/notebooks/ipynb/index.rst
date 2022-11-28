@@ -7,3 +7,4 @@ Accessing geospatial data the easy way (Python)
 
    atmosphere
    climate_change
+   hydrology
