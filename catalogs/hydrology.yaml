@@ -6,13 +6,8 @@ sources:
     args:
       consolidated: True
       engine: zarr
-      storage_options:
-        anon: True
-        client_kwargs:
-          endpoint_url: https://s3.wasabisys.com
-          region_name: us-east-1
       urlpath:
-      - s3://hydrometric/quebec/cehq/zarr/test-timeseries
+      - https://s3.us-east-1.wasabisys.com/hydrometric/quebec/cehq/zarr/test-timeseries
     description: CEHQ daily flow and water levels
     driver: zarr
     metadata:
@@ -23,3 +18,19 @@ sources:
       status:
         - dev
       url: https://www.cehq.gouv.qc.ca/hydrometrie/historique_donnees/default.asp
+  hydat:
+    args:
+      consolidated: True
+      engine: zarr
+      urlpath:
+      - https://s3.us-east-1.wasabisys.com/hydrometric/canada/hydat/zarr
+    description: HYDAT daily flow and water levels
+    driver: zarr
+    metadata:
+      tags:
+      - hydrology
+      - model
+      - streamflow
+      status:
+        - dev
+      url: https://www.canada.ca/en/environment-climate-change/services/water-overview/quantity/monitoring/survey/data-products-services/national-archive-hydat.html
