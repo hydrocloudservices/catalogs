@@ -23,7 +23,7 @@ sources:
       consolidated: True
       engine: zarr
       urlpath:
-      - https://s3.us-east-1.wasabisys.com/hydrometric/canada/hydat
+      - https://s3.us-east-1.wasabisys.com/hydrometric/canada/hydat/zarr
     description: HYDAT daily flow and water levels
     driver: zarr
     metadata:
