@@ -29,7 +29,7 @@ dependencies:
  - tqdm
  - matplotlib
  - gcsfs
- - pystac_client
+ - pystac-client
  - pip:
    - sphinx-pangeo-theme
    - furo
