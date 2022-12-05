@@ -11,7 +11,7 @@ dependencies:
  - numpy
  - intake
  - intake-xarray
- - intake-geopandas
+ - intake-geopandas=0.4.0
  - intake-esm
  - hvplot
  - fsspec
