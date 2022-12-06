@@ -29,7 +29,7 @@ sources:
         client_kwargs:
           endpoint_url: https://s3.us-east-1.wasabisys.com
           region_name: us-east-1
-      urlpath: hydrometric/canada/hydat/geoparquet/hydat.geoparquet
+      urlpath: s3://hydrometric/canada/hydat/geoparquet/hydat.geoparquet
       use_fsspec: True
     description: HYDAT basin delimitation
     driver: geoparquet
