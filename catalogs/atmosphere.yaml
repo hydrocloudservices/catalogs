@@ -28,8 +28,13 @@ sources:
     args:
       consolidated: True
       engine: zarr
+      storage_options:
+        anon: True
+        client_kwargs:
+          endpoint_url: https://s3.wasabisys.com
+          region_name: us-east-1
       urlpath:
-      - https://s3.us-east-1.wasabisys.com/era5/north-america/reanalysis/land/zarr/time-series
+      - era5/north-america/reanalysis/land/zarr/time-series
     description: ERA5-Land hourly estimates of variables on single levels chunked for time series analysis
     driver: zarr
     metadata:
@@ -127,8 +132,13 @@ sources:
     args:
       consolidated: True
       engine: zarr
+      storage_options:
+        anon: True
+        client_kwargs:
+          endpoint_url: https://s3.wasabisys.com
+          region_name: us-east-1
       urlpath:
-      - https://s3.us-east-1.wasabisys.com/ghcnd-world
+      - ghcnd-world
     description: Global Historical Climatology Network daily (GHCNd) 
     driver: zarr
     metadata:
