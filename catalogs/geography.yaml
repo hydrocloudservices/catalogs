@@ -21,3 +21,23 @@ sources:
       status:
         - dev
       url: https://www.cehq.gouv.qc.ca/hydrometrie/
+
+  hydat_polygons:
+    args:
+      storage_options:
+        anon: True
+        client_kwargs:
+          endpoint_url: https://s3.us-east-1.wasabisys.com
+          region_name: us-east-1
+      urlpath: hydrometric/canada/hydat/geoparquet
+      use_fsspec: True
+    description: HYDAT basin delimitation
+    driver: geoparquet
+    metadata:
+      tags:
+      - ocean
+      - model
+      - atmosphere
+      status:
+        - dev
+      url: https://www.cehq.gouv.qc.ca/hydrometrie/
