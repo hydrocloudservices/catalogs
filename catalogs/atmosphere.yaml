@@ -34,7 +34,7 @@ sources:
           endpoint_url: https://s3.wasabisys.com
           region_name: us-east-1
       urlpath:
-      - era5/north-america/reanalysis/land/zarr/time-series
+      - s3://era5/north-america/reanalysis/land/zarr/time-series
     description: ERA5-Land hourly estimates of variables on single levels chunked for time series analysis
     driver: zarr
     metadata:
