@@ -11,6 +11,8 @@ sources:
         client_kwargs:
           endpoint_url: https://s3.wasabisys.com
           region_name: us-east-1
+        config_kwargs:
+          max_pool_connections: 30
       urlpath:
       - s3://era5/world/reanalysis/single-levels/zarr/timeseries/archive
     description: ERA5 hourly estimates of variables on single levels chunked for time series analysis
@@ -33,6 +35,8 @@ sources:
         client_kwargs:
           endpoint_url: https://s3.wasabisys.com
           region_name: us-east-1
+        config_kwargs:
+          max_pool_connections: 30
       urlpath:
       - s3://era5/north-america/reanalysis/land/zarr/time-series
     description: ERA5-Land hourly estimates of variables on single levels chunked for time series analysis
