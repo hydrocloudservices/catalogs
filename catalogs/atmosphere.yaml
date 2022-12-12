@@ -142,7 +142,7 @@ sources:
           endpoint_url: https://s3.wasabisys.com
           region_name: us-east-1
       urlpath:
-      - ghcnd-world
+      - s3://ghcnd-world
     description: Global Historical Climatology Network daily (GHCNd) 
     driver: zarr
     metadata:
