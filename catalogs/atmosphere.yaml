@@ -38,7 +38,7 @@ sources:
         config_kwargs:
           max_pool_connections: 30
       urlpath:
-      - s3://era5/world/reanalysis/single-levels/zarr/time_series
+      - s3://era5/world/reanalysis/single-levels/zarr/timeseries_real_time
     description: ERA5 hourly estimates of variables on single levels chunked for time series analysis
     driver: zarr
     metadata:
