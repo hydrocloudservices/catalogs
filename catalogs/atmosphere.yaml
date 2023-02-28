@@ -28,7 +28,7 @@ sources:
 
   era5_reanalysis_single_levels_dev:
     args:
-      consolidated: False
+      consolidated: True
       engine: zarr
       storage_options:
         anon: True
