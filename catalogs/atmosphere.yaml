@@ -163,7 +163,35 @@ sources:
       status:
         - prod
       url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-pressure-levels
-      
+  
+  hydrometric:
+    args:
+      chunks: {}
+      consolidated: False
+      storage_options:
+        fo: https://s3.us-east-1.wasabisys.com/hydrometric/streamflow_combined.json
+        remote_options:
+          anon: True
+          client_kwargs:
+            endpoint_url: https://s3.wasabisys.com
+            region_name: us-east-1
+          config_kwargs: 
+            max_pool_connections: 30
+        remote_protocol: 's3'
+        target_protocol: https
+        skip_instance_cache: True
+      urlpath: reference://
+    description: Hydrometric (streamflow) and associated forcings for each basin
+    driver: intake_xarray.xzarr.ZarrSource
+    metadata:
+      tags:
+      - ocean
+      - model
+      - atmosphere
+      status:
+        - dev
+      url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land
+
   daymet_daily_na:
     args:
       consolidated: True
