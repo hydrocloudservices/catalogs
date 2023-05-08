@@ -16,7 +16,7 @@ jobs:
         auto-activate-base: false
     - shell: bash -l {0}
       run: |
-        python ./ci/era5_hourly_reanalysis_single_levels_ts.py
+        python pipeline/update_hydrometric.py
     - name: Commit files
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
