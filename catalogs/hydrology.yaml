@@ -2,62 +2,12 @@ plugins:
   source:
   - module: intake_xarray
 sources:
-  melcc:
-    args:
-      consolidated: True
-      engine: zarr
-      chunks: {}
-      storage_options:
-        anon: True
-        client_kwargs:
-          endpoint_url: https://s3.wasabisys.com
-          region_name: us-east-1
-        config_kwargs:
-          max_pool_connections: 30
-      urlpath:
-      - s3://hydrometric/quebec/cehq/timeseries_20230504
-    description: CEHQ daily flow and water levels
-    driver: zarr
-    metadata:
-      tags:
-      - hydrology
-      - model
-      - streamflow
-      status:
-        - dev
-      url: https://www.cehq.gouv.qc.ca/hydrometrie/historique_donnees/default.asp
-      
-  hydrometric:
-    args:
-      consolidated: True
-      engine: zarr
-      chunks: {}
-      storage_options:
-        anon: True
-        client_kwargs:
-          endpoint_url: https://s3.wasabisys.com
-          region_name: us-east-1
-        config_kwargs:
-          max_pool_connections: 30
-      urlpath:
-      - s3://hydrometric/source/combined/timeseries_20230504
-    description: Hydrometric (streamflow) and associated forcings for each basin
-    driver: intake_xarray.xzarr.ZarrSource
-    metadata:
-      tags:
-      - ocean
-      - model
-      - atmosphere
-      status:
-        - dev
-      url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land
-      
   hydat:
     args:
-      consolidated: True
+      consolidated: true
       engine: zarr
       storage_options:
-        anon: True
+        anon: true
         client_kwargs:
           endpoint_url: https://s3.wasabisys.com
           region_name: us-east-1
@@ -68,10 +18,58 @@ sources:
     description: HYDAT daily flow and water levels
     driver: zarr
     metadata:
+      status:
+      - dev
       tags:
       - hydrology
       - model
       - streamflow
-      status:
-        - dev
       url: https://www.canada.ca/en/environment-climate-change/services/water-overview/quantity/monitoring/survey/data-products-services/national-archive-hydat.html
+  hydrometric:
+    args:
+      chunks: {}
+      consolidated: true
+      engine: zarr
+      storage_options:
+        anon: true
+        client_kwargs:
+          endpoint_url: https://s3.wasabisys.com
+          region_name: us-east-1
+        config_kwargs:
+          max_pool_connections: 30
+      urlpath:
+      - s3://hydrometric/source/combined/zarr/2023-04-19
+    description: Hydrometric (streamflow) and associated forcings for each basin
+    driver: intake_xarray.xzarr.ZarrSource
+    metadata:
+      status:
+      - dev
+      tags:
+      - ocean
+      - model
+      - atmosphere
+      url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land
+  melcc:
+    args:
+      chunks: {}
+      consolidated: true
+      engine: zarr
+      storage_options:
+        anon: true
+        client_kwargs:
+          endpoint_url: https://s3.wasabisys.com
+          region_name: us-east-1
+        config_kwargs:
+          max_pool_connections: 30
+      urlpath:
+      - s3://hydrometric/quebec/cehq/timeseries_20230504
+    description: CEHQ daily flow and water levels
+    driver: zarr
+    metadata:
+      status:
+      - dev
+      tags:
+      - hydrology
+      - model
+      - streamflow
+      url: https://www.cehq.gouv.qc.ca/hydrometrie/historique_donnees/default.asp
