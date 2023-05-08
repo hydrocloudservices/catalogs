@@ -6,8 +6,15 @@ sources:
     args:
       consolidated: True
       engine: zarr
+      storage_options:
+        anon: True
+        client_kwargs:
+          endpoint_url: https://s3.wasabisys.com
+          region_name: us-east-1
+        config_kwargs:
+          max_pool_connections: 30
       urlpath:
-      - https://s3.us-east-1.wasabisys.com/era5/world/reanalysis/single-levels/zarr/timeseries/archive
+      - s3://era5/world/reanalysis/single-levels/zarr/timeseries_real_time
     description: ERA5 hourly estimates of variables on single levels chunked for time series analysis
     driver: zarr
     metadata:
@@ -19,12 +26,43 @@ sources:
         - prod
       url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels
 
+  era5_reanalysis_single_levels_dev:
+    args:
+      consolidated: True
+      engine: zarr
+      storage_options:
+        anon: True
+        client_kwargs:
+          endpoint_url: https://s3.wasabisys.com
+          region_name: us-east-1
+        config_kwargs:
+          max_pool_connections: 30
+      urlpath:
+      - s3://era5/world/reanalysis/single-levels/zarr/timeseries
+    description: ERA5 hourly estimates of variables on single levels chunked for time series analysis
+    driver: zarr
+    metadata:
+      tags:
+      - ocean
+      - model
+      - atmosphere
+      status:
+        - dev
+      url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels
+      
   era5_land_reanalysis:
     args:
       consolidated: True
       engine: zarr
+      storage_options:
+        anon: True
+        client_kwargs:
+          endpoint_url: https://s3.wasabisys.com
+          region_name: us-east-1
+        config_kwargs:
+          max_pool_connections: 30
       urlpath:
-      - https://s3.us-east-1.wasabisys.com/era5/north-america/reanalysis/land/zarr/time-series
+      - s3://era5/north-america/reanalysis/land/zarr/time-series
     description: ERA5-Land hourly estimates of variables on single levels chunked for time series analysis
     driver: zarr
     metadata:
@@ -35,7 +73,61 @@ sources:
       status:
         - dev
       url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land
-      
+
+  era5_land_reanalysis_dev:
+    args:
+      consolidated: True
+      engine: zarr
+      storage_options:
+        anon: True
+        client_kwargs:
+          endpoint_url: https://s3.wasabisys.com
+          region_name: us-east-1
+        config_kwargs:
+          max_pool_connections: 30
+      urlpath:
+      - s3://era5/north-america/reanalysis/land/zarr/timeseries_real_time
+    description: ERA5-Land hourly estimates of variables on single levels chunked for time series analysis
+    driver: zarr
+    metadata:
+      tags:
+      - ocean
+      - model
+      - atmosphere
+      status:
+        - dev
+      url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land
+
+  era5_land_reanalysis_test:
+    args:
+      consolidated: True
+      engine: zarr
+      storage_options:
+        anon: True
+        client_kwargs:
+          endpoint_url: https://s3.wasabisys.com
+          region_name: us-east-1
+        config_kwargs:
+          max_pool_connections: 30
+      urlpath:
+      - s3://era5/north-america/reanalysis/land/zarr/timeseries_real_time_u10
+      - s3://era5/north-america/reanalysis/land/zarr/timeseries_real_time_v10
+      - s3://era5/north-america/reanalysis/land/zarr/timeseries_real_time_strd
+      - s3://era5/north-america/reanalysis/land/zarr/timeseries_real_time_ssrd
+      - s3://era5/north-america/reanalysis/land/zarr/timeseries_real_time_sp
+      - s3://era5/north-america/reanalysis/land/zarr/timeseries_real_time_sf
+      - s3://era5/north-america/reanalysis/land/zarr/timeseries_real_time_d2m
+    description: ERA5-Land hourly estimates of variables on single levels chunked for time series analysis
+    driver: zarr
+    metadata:
+      tags:
+      - ocean
+      - model
+      - atmosphere
+      status:
+        - dev
+      url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land
+
   era5_reanalysis_single_levels_spatial:
     args:
       chunks: {}
@@ -101,7 +193,7 @@ sources:
       status:
         - prod
       url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-pressure-levels
-      
+
   daymet_daily_na:
     args:
       consolidated: True
@@ -122,8 +214,13 @@ sources:
     args:
       consolidated: True
       engine: zarr
+      storage_options:
+        anon: True
+        client_kwargs:
+          endpoint_url: https://s3.wasabisys.com
+          region_name: us-east-1
       urlpath:
-      - https://s3.us-east-1.wasabisys.com/ghcnd-world
+      - s3://ghcnd-world
     description: Global Historical Climatology Network daily (GHCNd) 
     driver: zarr
     metadata:

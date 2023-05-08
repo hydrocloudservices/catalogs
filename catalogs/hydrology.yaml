@@ -6,8 +6,16 @@ sources:
     args:
       consolidated: True
       engine: zarr
+      chunks: {}
+      storage_options:
+        anon: True
+        client_kwargs:
+          endpoint_url: https://s3.wasabisys.com
+          region_name: us-east-1
+        config_kwargs:
+          max_pool_connections: 30
       urlpath:
-      - https://s3.us-east-1.wasabisys.com/hydrometric/quebec/cehq/zarr/test-timeseries
+      - s3://hydrometric/quebec/cehq/timeseries_20230504
     description: CEHQ daily flow and water levels
     driver: zarr
     metadata:
@@ -18,12 +26,47 @@ sources:
       status:
         - dev
       url: https://www.cehq.gouv.qc.ca/hydrometrie/historique_donnees/default.asp
+  hydrometric:
+    args:
+      chunks: {}
+      consolidated: False
+      storage_options:
+        fo: https://s3.us-east-1.wasabisys.com/hydrometric/streamflow_combined.json
+        remote_options:
+          anon: True
+          client_kwargs:
+            endpoint_url: https://s3.wasabisys.com
+            region_name: us-east-1
+          config_kwargs: 
+            max_pool_connections: 30
+        remote_protocol: 's3'
+        target_protocol: https
+        skip_instance_cache: True
+      urlpath: reference://
+    description: Hydrometric (streamflow) and associated forcings for each basin
+    driver: intake_xarray.xzarr.ZarrSource
+    metadata:
+      tags:
+      - ocean
+      - model
+      - atmosphere
+      status:
+        - dev
+      url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land
+      
   hydat:
     args:
       consolidated: True
       engine: zarr
+      storage_options:
+        anon: True
+        client_kwargs:
+          endpoint_url: https://s3.wasabisys.com
+          region_name: us-east-1
+        config_kwargs:
+          max_pool_connections: 30
       urlpath:
-      - https://s3.us-east-1.wasabisys.com/hydrometric/canada/hydat
+      - s3://hydrometric/canada/hydat
     description: HYDAT daily flow and water levels
     driver: zarr
     metadata:
