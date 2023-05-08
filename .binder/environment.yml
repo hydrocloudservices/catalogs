@@ -3,14 +3,14 @@ channels:
  - conda-forge
  - pyviz
 dependencies:
- - python=3.8*
+ - python=3.10*
  - s3fs
  - dask
  - xoak
  - xarray
  - numpy
  - intake
- - intake-xarray
+ - intake-xarray=0.6.1
  - intake-geopandas
  - intake-esm
  - hvplot
