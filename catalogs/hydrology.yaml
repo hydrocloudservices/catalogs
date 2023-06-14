@@ -49,7 +49,7 @@ sources:
       - model
       - atmosphere
       url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land
-  melcc:
+  deh:
     args:
       chunks: {}
       consolidated: true
@@ -62,7 +62,7 @@ sources:
         config_kwargs:
           max_pool_connections: 30
       urlpath:
-      - s3://hydrometric/quebec/cehq/timeseries_20230504
+      - s3://hydrometric/source/deh/zarr/2023-06-14
     description: CEHQ daily flow and water levels
     driver: zarr
     metadata:
