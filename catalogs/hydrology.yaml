@@ -2,6 +2,30 @@ plugins:
   source:
   - module: intake_xarray
 sources:
+  deh:
+    args:
+      chunks: {}
+      consolidated: true
+      engine: zarr
+      storage_options:
+        anon: true
+        client_kwargs:
+          endpoint_url: https://s3.wasabisys.com
+          region_name: us-east-1
+        config_kwargs:
+          max_pool_connections: 30
+      urlpath:
+      - s3://hydrometric/source/deh/zarr/2023-06-14
+    description: CEHQ daily flow and water levels
+    driver: zarr
+    metadata:
+      status:
+      - dev
+      tags:
+      - hydrology
+      - model
+      - streamflow
+      url: https://www.cehq.gouv.qc.ca/hydrometrie/historique_donnees/default.asp
   hydat:
     args:
       consolidated: true
@@ -38,7 +62,7 @@ sources:
         config_kwargs:
           max_pool_connections: 30
       urlpath:
-      - s3://hydrometric/source/combined/zarr/2023-05-26
+      - s3://hydrometric/source/combined/zarr/2023-05-27
     description: Hydrometric (streamflow) and associated forcings for each basin
     driver: intake_xarray.xzarr.ZarrSource
     metadata:
@@ -49,27 +73,3 @@ sources:
       - model
       - atmosphere
       url: https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land
-  deh:
-    args:
-      chunks: {}
-      consolidated: true
-      engine: zarr
-      storage_options:
-        anon: true
-        client_kwargs:
-          endpoint_url: https://s3.wasabisys.com
-          region_name: us-east-1
-        config_kwargs:
-          max_pool_connections: 30
-      urlpath:
-      - s3://hydrometric/source/deh/zarr/2023-06-14
-    description: CEHQ daily flow and water levels
-    driver: zarr
-    metadata:
-      status:
-      - dev
-      tags:
-      - hydrology
-      - model
-      - streamflow
-      url: https://www.cehq.gouv.qc.ca/hydrometrie/historique_donnees/default.asp
