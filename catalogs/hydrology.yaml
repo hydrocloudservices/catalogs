@@ -62,7 +62,7 @@ sources:
         config_kwargs:
           max_pool_connections: 30
       urlpath:
-      - s3://hydrometric/source/combined/zarr/2023-07-11
+      - s3://hydrometric/source/combined/zarr/2023-07-12
     description: Hydrometric (streamflow) and associated forcings for each basin
     driver: intake_xarray.xzarr.ZarrSource
     metadata:
