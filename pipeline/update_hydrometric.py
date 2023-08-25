@@ -14,7 +14,7 @@ fs = fsspec.filesystem('s3', **STORAGE_OPTIONS)
 
 fname = "./catalogs/hydrology.yaml"
 
-# Get last available zarr
+# Get last available zarr - Hydrometric
 count = 0
 max_guesses_allowed = 20
 day = datetime.now() #
@@ -29,5 +29,23 @@ while not store_exists and count < max_guesses_allowed:
 stream = open(fname, 'r')
 data = yaml.load(stream, Loader=yaml.FullLoader)
 data['sources']['hydrometric']['args']['urlpath']= [urlpath]
+with open(fname, 'w') as yaml_file:
+    yaml_file.write( yaml.dump(data, default_flow_style=False))
+
+# Get last available zarr - DEH
+count = 0
+max_guesses_allowed = 20
+day = datetime.now() #
+store_exists = False
+while not store_exists and count < max_guesses_allowed:
+    urlpath = f"s3://hydrometric/source/deh/zarr/{day.strftime('%Y-%m-%d')}"
+    store_exists = fs.exists(urlpath)
+    day = day - timedelta(days=1)
+    count += 1
+
+# Change urlpath in yaml and update
+stream = open(fname, 'r')
+data = yaml.load(stream, Loader=yaml.FullLoader)
+data['sources']['deh']['args']['urlpath']= [urlpath]
 with open(fname, 'w') as yaml_file:
     yaml_file.write( yaml.dump(data, default_flow_style=False))
