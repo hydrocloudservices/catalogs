@@ -24,13 +24,13 @@ while not store_exists and count < max_guesses_allowed:
     store_exists = fs.exists(urlpath)
     day = day - timedelta(days=1)
     count += 1
-
-# Change urlpath in yaml and update
-stream = open(fname, 'r')
-data = yaml.load(stream, Loader=yaml.FullLoader)
-data['sources']['hydrometric']['args']['urlpath']= [urlpath]
-with open(fname, 'w') as yaml_file:
-    yaml_file.write( yaml.dump(data, default_flow_style=False))
+if count < max_guesses_allowed:
+  # Change urlpath in yaml and update
+  stream = open(fname, 'r')
+  data = yaml.load(stream, Loader=yaml.FullLoader)
+  data['sources']['hydrometric']['args']['urlpath']= [urlpath]
+  with open(fname, 'w') as yaml_file:
+      yaml_file.write( yaml.dump(data, default_flow_style=False))
 
 # Get last available zarr - DEH
 count = 0
@@ -43,9 +43,10 @@ while not store_exists and count < max_guesses_allowed:
     day = day - timedelta(days=1)
     count += 1
 
-# Change urlpath in yaml and update
-stream = open(fname, 'r')
-data = yaml.load(stream, Loader=yaml.FullLoader)
-data['sources']['deh']['args']['urlpath']= [urlpath]
-with open(fname, 'w') as yaml_file:
-    yaml_file.write( yaml.dump(data, default_flow_style=False))
+if count < max_guesses_allowed:
+  # Change urlpath in yaml and update
+  stream = open(fname, 'r')
+  data = yaml.load(stream, Loader=yaml.FullLoader)
+  data['sources']['deh']['args']['urlpath']= [urlpath]
+  with open(fname, 'w') as yaml_file:
+      yaml_file.write( yaml.dump(data, default_flow_style=False))
