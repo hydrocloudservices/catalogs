@@ -49,9 +49,11 @@ sources:
           endpoint_url: https://s3.us-east-2.wasabisys.com
           region_name: us-east-2
       urlpath: s3://watersheds-polygons/MELCC/deh.parquet
-      _geopandas_kwargs: 
-        filters: {{filters}}
       use_fsspec: False
+    parameters:
+      filters:
+        description: "root path"
+        type: list
     description: DEH basin delimitation
     driver: geoparquet
     metadata:
