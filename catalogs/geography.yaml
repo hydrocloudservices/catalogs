@@ -41,3 +41,22 @@ sources:
       status:
         - dev
       url: https://www.cehq.gouv.qc.ca/hydrometrie/
+  deh_polygons:
+    args:
+      storage_options:
+        anon: True
+        client_kwargs:
+          endpoint_url: https://s3.us-east-2.wasabisys.com
+          region_name: us-east-2
+      urlpath: s3://watersheds-polygons/MELCC/deh.parquet
+      use_fsspec: False
+    description: DEH basin delimitation
+    driver: geoparquet
+    metadata:
+      tags:
+      - ocean
+      - model
+      - atmosphere
+      status:
+        - dev
+      url: https://www.cehq.gouv.qc.ca/hydrometrie/
