@@ -31,6 +31,8 @@ sources:
           region_name: us-east-1
       urlpath: s3://hydrometric/canada/hydat/geoparquet/hydat.geoparquet
       use_fsspec: False
+      _geopandas_kwargs:
+        filters: "{{filters}}"
     description: HYDAT basin delimitation
     driver: geoparquet
     metadata:
