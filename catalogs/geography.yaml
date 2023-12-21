@@ -52,6 +52,8 @@ sources:
           region_name: us-east-2
       urlpath: s3://watersheds-polygons/MELCC/deh.parquet
       use_fsspec: False
+      _geopandas_kwargs:
+        filters: {{filters}}
     parameters:
       filters:
         description: "root path"
