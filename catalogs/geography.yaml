@@ -51,7 +51,7 @@ sources:
       urlpath: s3://watersheds-polygons/MELCC/deh.parquet
       use_fsspec: False
       _geopandas_kwargs:
-        filters: {{filter}}
+        filters: [[('Station', 'in', ('010101','010902','011201','011001','011704','075601')),]]
     parameters:
       filter:
         description: "root path"
