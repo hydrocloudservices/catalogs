@@ -50,13 +50,13 @@ sources:
           region_name: us-east-2
       urlpath: s3://watersheds-polygons/MELCC/deh.parquet
       _geopandas_kwargs: 
-        filters: "{{filters}}"
+        filters: {{filters}}
       use_fsspec: False
       parameters:
         filters:
             description: "root path"
-            type: str
-            default: ""
+            type: list
+            default: []
     description: DEH basin delimitation
     driver: geoparquet
     metadata:
