@@ -54,9 +54,8 @@ sources:
       use_fsspec: False
       parameters:
         filters:
-            description: "root path"
-            type: list
-            default: []
+          description: "root path"
+          type: list
     description: DEH basin delimitation
     driver: geoparquet
     metadata:
