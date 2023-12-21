@@ -53,6 +53,7 @@ sources:
     description: DEH basin delimitation
     driver: geoparquet
     metadata:
+      unique_id: Station
       tags:
       - ocean
       - model
