@@ -52,10 +52,6 @@ sources:
       _geopandas_kwargs: 
         filters: {{filters}}
       use_fsspec: False
-    parameters:
-      filters:
-        description: "root path"
-        type: list
     description: DEH basin delimitation
     driver: geoparquet
     metadata:
