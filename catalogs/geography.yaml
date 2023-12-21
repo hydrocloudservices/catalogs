@@ -55,7 +55,6 @@ sources:
       parameters:
         filters:
           description: "root path"
-          type: list
     description: DEH basin delimitation
     driver: geoparquet
     metadata:
