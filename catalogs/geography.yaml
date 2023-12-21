@@ -53,9 +53,9 @@ sources:
       urlpath: s3://watersheds-polygons/MELCC/deh.parquet
       use_fsspec: False
       _geopandas_kwargs:
-        filters: {{filters}}
+        filters: {{filter}}
     parameters:
-      filters:
+      filter:
         description: "root path"
         type: list
     description: DEH basin delimitation
