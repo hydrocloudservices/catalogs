@@ -15,7 +15,7 @@ sources:
         config_kwargs:
           max_pool_connections: 30
       urlpath:
-      - s3://hydrometric/source/deh/zarr/2024-02-04
+      - s3://hydrometric/source/deh/zarr/2024-02-05
     description: CEHQ daily flow and water levels
     driver: zarr
     metadata:
