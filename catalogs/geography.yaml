@@ -27,7 +27,7 @@ sources:
       storage_options:
         anon: True
         client_kwargs:
-          endpoint_url: https://s3.us-east-1.wasabisys.com
+          endpoint_url: https://s3.wasabisys.com
           region_name: us-east-1
       urlpath: s3://hydrometric/canada/hydat/geoparquet/hydat.geoparquet
       use_fsspec: False
